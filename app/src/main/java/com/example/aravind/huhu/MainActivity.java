@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
         if (isFirstRun) {
-            //show start activity
 
             startActivity(new Intent(this, Intro.class));
         }
