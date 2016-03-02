@@ -1,5 +1,6 @@
 package com.example.aravind.huhu;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,6 +16,11 @@ public class Intro extends AppIntro2 {
     @Override
     public void init(Bundle savedInstanceState) {
 
+        Boolean isFirstRun = getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE)
+                .getBoolean("isFirstRun", true);
+        if (!isFirstRun) {
+            startActivity(new Intent(this, MainActivity.class));
+        }
         addSlide(AppIntroFragment.newInstance("app","desc", android.R.drawable.ic_input_add,Color.parseColor("#FFB6C1")));
         addSlide(AppIntroFragment.newInstance("app","...", android.R.drawable.ic_input_add, R.color.app_intro_background));
         addSlide(AppIntroFragment.newInstance("PERMISSION","...", android.R.drawable.ic_input_add, R.color.app_intro_background));

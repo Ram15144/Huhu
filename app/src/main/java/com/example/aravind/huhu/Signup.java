@@ -1,5 +1,6 @@
 package com.example.aravind.huhu;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -65,8 +66,9 @@ public class Signup extends Fragment {
         }
 
         Toast.makeText(getActivity(), "Thank You!", Toast.LENGTH_SHORT).show();
-        intent=new Intent(getActivity(),MainActivity.class);
-        startActivity(intent);
+        getContext().getSharedPreferences("PREFERENCE", Context.MODE_PRIVATE).edit()
+                .putBoolean("isFirstRun", false).commit();
+        startActivity(new Intent(getContext(),MainActivity.class));
     }
     private boolean validateName() {
         if (inputName.getText().toString().trim().isEmpty()) {
