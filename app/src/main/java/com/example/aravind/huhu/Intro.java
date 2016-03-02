@@ -17,6 +17,7 @@ public class Intro extends AppIntro2 {
 
         addSlide(AppIntroFragment.newInstance("app","desc", android.R.drawable.ic_input_add,Color.parseColor("#FFB6C1")));
         addSlide(AppIntroFragment.newInstance("app","...", android.R.drawable.ic_input_add, R.color.app_intro_background));
+        addSlide(new Signup());
         setFlowAnimation();
         showStatusBar(false);
         setVibrate(true);
