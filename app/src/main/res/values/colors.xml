@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#d8d8d8</color>
     <color name="colorAccent">#FF4081</color>
     <color name="app_intro_background">#FFFFFF</color>
+    <color name="hospital_name">#222222</color>
+    <color name="doctor_name">#999999</color>
+    <color name="tabsScrollColor">#A0A0A0</color>
+    <color name="colorSlidingTab">#7E57C2</color>
+
 </resources>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HuHu</string>
+    <string name="action_settings">settings</string>
 </resources>

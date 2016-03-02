@@ -3,9 +3,6 @@ package com.example.aravind.huhu;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-
-import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntro2;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
@@ -28,7 +25,7 @@ public class Intro extends AppIntro2 {
 
     @Override
     public void onNextPressed() {
-    
+
 
         setVibrateIntensity(30);
 
@@ -37,8 +34,8 @@ public class Intro extends AppIntro2 {
     @Override
     public void onDonePressed() {
         intent=new Intent(this,MainActivity.class);
-        startActivity(intent);
         setVibrateIntensity(30);
+        startActivity(intent);
 
 
     }
