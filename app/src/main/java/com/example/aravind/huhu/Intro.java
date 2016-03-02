@@ -12,7 +12,7 @@ import com.github.paolorotolo.appintro.AppIntroFragment;
 /**
  * Created by aravind on 02/03/16.
  */
-public class Intro extends AppIntro {
+public class Intro extends AppIntro2 {
     Intent intent;
 
     @Override
@@ -21,21 +21,14 @@ public class Intro extends AppIntro {
         addSlide(AppIntroFragment.newInstance("app","desc", android.R.drawable.ic_input_add,Color.parseColor("#FFB6C1")));
         addSlide(AppIntroFragment.newInstance("app","...", android.R.drawable.ic_input_add, R.color.app_intro_background));
         setFlowAnimation();
-        setBarColor(Color.parseColor("#FF4081"));
-        setSeparatorColor(Color.parseColor("#FFFFFF"));
         showStatusBar(false);
         setVibrate(true);
     }
 
-    @Override
-    public void onSkipPressed() {
-
-
-    }
 
     @Override
     public void onNextPressed() {
-        showSkipButton(true);
+    
 
         setVibrateIntensity(30);
 
