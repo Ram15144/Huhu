@@ -22,6 +22,7 @@ public class Intro extends AppIntro2 {
         addSlide(new Signup());
         setFlowAnimation();
         showStatusBar(false);
+        showDoneButton(false);
         setVibrate(true);
     }
 

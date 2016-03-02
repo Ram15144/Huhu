@@ -1,5 +1,6 @@
 package com.example.aravind.huhu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
@@ -20,6 +21,7 @@ import android.widget.Toast;
  */
 public class Signup extends Fragment {
 
+    Intent intent;
     private EditText inputName, inputEmail, inputPassword;
     private TextInputLayout inputLayoutName, inputLayoutEmail, inputLayoutPassword;
     private Button btnSignUp;
@@ -63,6 +65,8 @@ public class Signup extends Fragment {
         }
 
         Toast.makeText(getActivity(), "Thank You!", Toast.LENGTH_SHORT).show();
+        intent=new Intent(getActivity(),MainActivity.class);
+        startActivity(intent);
     }
     private boolean validateName() {
         if (inputName.getText().toString().trim().isEmpty()) {
