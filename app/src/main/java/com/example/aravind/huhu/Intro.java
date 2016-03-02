@@ -1,5 +1,6 @@
 package com.example.aravind.huhu;
 
+import android.Manifest;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class Intro extends AppIntro2 {
 
         addSlide(AppIntroFragment.newInstance("app","desc", android.R.drawable.ic_input_add,Color.parseColor("#FFB6C1")));
         addSlide(AppIntroFragment.newInstance("app","...", android.R.drawable.ic_input_add, R.color.app_intro_background));
+        addSlide(AppIntroFragment.newInstance("PERMISSION","...", android.R.drawable.ic_input_add, R.color.app_intro_background));
         addSlide(new Signup());
         setFlowAnimation();
         showStatusBar(false);
@@ -37,6 +39,7 @@ public class Intro extends AppIntro2 {
         intent=new Intent(this,MainActivity.class);
         setVibrateIntensity(30);
         startActivity(intent);
+        //finish();
 
 
     }

@@ -115,4 +115,8 @@ public class MainActivity extends AppCompatActivity {
 
                 onOptionsItemSelected(item);
     }
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
 }
